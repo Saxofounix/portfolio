@@ -1,0 +1,159 @@
+@import url('main.css');
+
+:root{
+    --animation-blur: blur 3.5s forwards;
+}
+
+nav{
+    animation: fadeDown 1s ease calc(var(--typeWriterSpeed) - 4s) forwards;
+    position: relative;
+    z-index: 100;
+}
+
+h3, h4{
+    margin: 0;
+}
+
+.header-wrapper{
+    margin: 1rem;
+    display: flex;
+    height: 70vh;
+    opacity: 0;
+    animation: var(--animation-blur);
+}
+
+.left{
+    padding: 0.5rem;
+    flex: 1;
+    background: url('/images/portrait.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.right{
+    flex: 2;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cv-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.experience-heading,
+.education-heading{
+    width: 60vw;
+    text-align: right;
+    margin: 0.125rem;
+    font-size: 3rem;
+    color: rgb(80, 80,80);
+    opacity: 0.2;
+}
+
+.education-heading{
+    text-align: left;
+}
+
+.cv-section{
+    display: flex;
+    min-height: 50vh;
+    max-width: 60vw;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-left{
+    width: 100%;
+    flex: 2;
+    border: 2px solid black;
+    padding: 0rem 1rem 0rem 1rem;
+}
+.section-right{
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    align-items: center;
+}
+.education-right{
+    border-right: 0px;
+}
+.experience-left{
+    border-right: 0px;
+}
+
+.experience-right div,
+.education-right div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid black;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(80, 80,80, 0.4);
+    color: white;
+    text-align: center;
+}
+.experience-right > div:hover{
+    cursor: pointer;
+    background-color: rgba(80, 80,80, 0.3);
+}
+.education-right > div:hover{
+    cursor: pointer;
+    background-color: rgba(80, 80,80, 0.3);
+    
+}
+
+@keyframes blur{
+    to{
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 799px), (max-height: 419px) {
+    .header-wrapper{
+        height: auto;
+    }
+   .left{
+        display: none;
+   }
+   .right{
+       text-align: left;
+       margin: 0;
+       padding: 0;
+   }
+   .education-heading,
+   .experience-heading{
+       width: 100%;
+       text-align: center;
+   }
+    .cv-section{
+        flex-direction: column;
+        min-width: 80vw;
+   }
+   .reverse{
+       flex-direction: column-reverse;
+   }
+   .section-left,
+   .section-right{
+        border: 2px black solid;
+        border-bottom: hidden;
+        height: auto;
+   }
+   .section-right{
+       border: none;
+       border: 2px black solid;
+   }
+   .education-right > div,
+   .experience-right > div{
+       height: 5vh;
+   }
+  
+}

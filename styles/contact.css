@@ -1,0 +1,135 @@
+@import url('main.css');
+
+:root{
+    --animation-blur: blur 2.5s forwards;
+}
+
+nav{
+    animation: fadeDown 1s ease calc(var(--typeWriterSpeed) - 4s) forwards;
+    position: relative;
+    z-index: 100;
+}
+
+h1{
+    opacity: 0;
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 0;
+    filter: blur(0.5rem);
+    animation: var(--animation-blur);
+    font-size: 3rem;
+    color: rgba(80, 80,80,0.2);
+}
+
+i{
+    opacity: 0;
+    margin: 0.5rem;
+    filter: blur(0.5rem);
+    animation: var(--animation-blur);
+}
+
+input:focus, textarea:focus{
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+    font-size: 1rem;
+    font-family: monospace;
+    white-space: nowrap;  
+    overflow: auto
+}
+.contact > form {
+    opacity: 0;
+    display: flex;
+    filter: blur(0.5rem);
+    animation: var(--animation-blur);
+}
+.contact-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact > form > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact > form > div:nth-child(1) input{
+    height: 10.5vh;
+    width: 25vw;
+    border: 1.5px solid black;
+    margin: 0.125rem;
+    font-size: 1rem;
+    padding: 0.25rem;
+}
+
+.contact> form > div:nth-child(2) textarea, input{
+    height: 100%;
+    min-width: 25vw;
+    max-width: 60vw;
+    border: 1.5px solid black;
+    font-size: 1rem;
+    margin: 0.125rem;
+    flex: 1;
+}
+
+#contact {
+    cursor: pointer;
+}
+
+.contact-wrapper > div:nth-child(2){
+    display: flex;
+    margin: 0.5rem;
+}
+
+.required{
+    position: relative;
+}
+
+.required::before{
+    content: '*';
+    color: red;
+    position: absolute;
+    padding: 0.25rem;
+    font-size: 1.5rem;
+    right: 0;
+}
+
+.not-required::before{
+    content: '*';
+    opacity: 0;
+    position: absolute;
+}
+
+.btn-2{
+    display: none;
+}
+
+@keyframes blur{
+    to{
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 799px), (max-height: 419px) {
+    .contact > form {
+        flex-direction: column;
+    }
+    .contact > form > div:nth-child(1) input{
+        height: 7vh;
+        width: 70vw;
+    }
+    .contact > form > div:nth-child(2) textarea, input{
+        min-width: 70vw;
+    }
+
+    .btn-1{
+        display: none;
+    }
+    .btn-2{
+        display: block;
+        height: 7vh;
+        width: 70vw;
+    }
+}

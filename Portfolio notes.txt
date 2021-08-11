@@ -1,0 +1,6 @@
+Disable hover effect on small screen
+Add animation to the toggle navigation- both sides
+Toggle with JS overflow hidden when opening nav?
+Image for the about page + animations
+Home page mobile 
+Add same effect to about as is in contact
