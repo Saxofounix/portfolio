@@ -1,0 +1,7 @@
+.projects-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3rem;
+    background: blue;
+    /* justify-content: center; */
+}
