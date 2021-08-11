@@ -1,7 +1,11 @@
 .projects-wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 3rem;
-    background: blue;
-    /* justify-content: center; */
+}
+.project-item{
+    background-color: white;
+    height: 50vh;
+    margin: 1rem;
+    border: 1px solid black;
 }
