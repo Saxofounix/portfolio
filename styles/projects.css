@@ -18,16 +18,19 @@
 .project-item:nth-child(2) .project-hero{
     background-image: url(/projects/landing-page/images/lading-page.png);
 }
+.project-item:nth-child(3) .project-hero{
+    background-image: url(/images/portfolio.png);
+}
 
 .project-info{
     padding: 0 0.5rem;
     word-wrap: break-word;
 }
-.project-info > h3{
+.project-info > h3, a{
     text-align: center;
 }
 .project-info > a{
-    display: inline-block;
+    display: block;
     border: 1px solid black;
     padding: 0.25rem;
     margin: 0.25rem;
